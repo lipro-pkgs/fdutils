@@ -1,0 +1,45 @@
+Fdutils
+
+Fdutils is set of tools to handle floppy disk drives.
+It includes the following items
+
+    * superformat: formats high capacity disks of (up to 1992k for
+      high density disks or up to 3984k for extra density disks)
+    * fdmount/fdmountd: automatically mounts/unmounts disks when they
+      are inserted/removed.
+    * xdfcopy: formats, reads and writes OS/2's XDF disks.
+    * MAKEFLOPPIES: creates the floppy devices in /dev
+    * getfdprm: prints the current disk geometry (number of sectors,
+      track and heads etc)
+    * setfdprm: sets the current disk geometry
+    * fdrawcmd: sends raw commands to the floppy driver
+    * floppycontrol: configure the floppy driver
+    * General documentation about the floppy driver
+
+Note, that the utilities do not work for USB floppy
+drives, because these are handled by the system as
+emulated SCSI disks, and the tools cannot access the
+floppy controller there.
+
+In order to make use of the more exotic floppy formats
+you may have to create the corresponding device files
+in /dev/.  To do so you can use (as root) the command
+
+    MAKEFLOPPIES -g
+
+which will probe the floppy driver in the kernel and
+create just the devices your kernel supports.
+Or you can use MAKEDEV to create a default set of devices.
+
+To make full use of fdmount you may want to set the suid bit
+for the fdmount executable.  To do so, you can use the
+fdutilsconfig script, which is distributed with fdutils.
+
+There are some known issues with superformat on non-i386
+and devfs systems.  If superformat does not work for you,
+you can try "fdformat" from the util-linux package,
+instead.
+
+Jochen
+
+ -- Jochen Voss <voss@debian.org>, Wed Feb 25 20:37:24 2004

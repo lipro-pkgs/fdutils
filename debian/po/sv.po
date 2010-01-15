@@ -1,0 +1,53 @@
+# Translators, if you are not familiar with the PO format, gettext
+# documentation is worth reading, especially sections dedicated to
+# this format, e.g. by running:
+# info -n '(gettext)PO Files'
+# info -n '(gettext)Header Entry'
+# Some information specific to po-debconf are available at
+# /usr/share/doc/po-debconf/README-trans
+# or http://www.debian.org/intl/l10n/po-debconf/README-trans
+# Developers do not need to manually edit POT or PO files.
+# , fuzzy
+#
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: fdutils 5.5-20050303-1\n"
+"Report-Msgid-Bugs-To: fdutils@packages.debian.org\n"
+"POT-Creation-Date: 2008-01-09 21:08+0100\n"
+"PO-Revision-Date: 2008-07-21 14:54+0100\n"
+"Last-Translator: Martin Bagge <brother@bsnet.se>\n"
+"Language-Team: Swedish <sv@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=iso-8859-1\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Type: boolean
+#. Description
+#: ../templates:2001
+msgid "Should fdmount be installed 'setuid root'?"
+msgstr "Vill du installera fdmount med 'setuid root'?"
+
+#. Type: boolean
+#. Description
+#: ../templates:2001
+msgid ""
+"In order to enable ordinary users to mount a floppy disk, the fdmount "
+"program can be installed with the set-user-ID bit set, so that it will run "
+"with the permissions of the superuser."
+msgstr ""
+"För att vanliga användare ska kunna montera en floppy diskett med fdmount "
+"måste fdmount sättas upp som suid root."
+
+#. Type: boolean
+#. Description
+#: ../templates:2001
+msgid ""
+"Such a setting may have security implications in the case of vulnerabilities "
+"in fdmount's code."
+msgstr ""
+"Instälningen kan innebära en säkerhetsrisk om felaktigheter i fdmount "
+"uppdagas och utnyttjas."
+
+#~ msgid "Do you want to make fdmount set-user-id root?"
+#~ msgstr "Vill du göra fdmount suid root?"

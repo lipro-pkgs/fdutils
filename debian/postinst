@@ -1,0 +1,50 @@
+#!/bin/sh
+set -e
+
+. /usr/share/debconf/confmodule
+
+#DEBHELPER#
+
+case "$1" in
+    configure)
+	install-info --description='Linux floppy utilities' \
+	    --section "Disk Management" "Disk Management" \
+	    --quiet /usr/share/info/fdutils.info.gz
+
+	if [ -e /etc/fdmount.conf ]; then
+	    TMPFILE="$(mktemp -q /tmp/fdmount.conf.tmp.XXXXXX)"
+	    db_get fdutils/fdmount_setuid
+	    if [ "$RET" = true ] \
+		&& grep -q '^is_suid=n.*' /etc/fdmount.conf; then
+		sed -e 's/^is_suid=.*$/is_suid=yes/' </etc/fdmount.conf >>"$TMPFILE"
+		chmod 644 "$TMPFILE"
+		mv "$TMPFILE" /etc/fdmount.conf
+		dpkg-statoverride --update --add root floppy 4750 /usr/bin/fdmount
+	    elif [ "$RET" = false ] \
+		&& grep -q '^is_suid=y.*' /etc/fdmount.conf; then
+		sed -e 's/^is_suid=.*$/is_suid=no/' </etc/fdmount.conf >>"$TMPFILE"
+		chmod 644 "$TMPFILE"
+		mv "$TMPFILE" /etc/fdmount.conf
+		chmod u-s /usr/bin/fdmount
+		dpkg-statoverride --remove /usr/bin/fdmount
+	    fi
+	    if [ -e "$TMPFILE" ]; then
+		rm -f "$TMPFILE"
+	    fi
+	fi
+
+	if [ -e "/etc/fdprm" ]; then
+	    echo "Fdutils-5.0 introduced two new configuration files: /etc/mediaprm and" >&2
+	    echo "/etc/driveprm.  They replace the old /etc/fdprm." >&2
+	    echo "Renaming old file /etc/fdprm to /etc/fdprm.obsolete ..." >&2
+	    mv -f /etc/fdprm /etc/fdprm.obsolete
+	    echo >&2
+	fi
+	;;
+
+    abort-upgrade|abort-remove|abort-deconfigure)
+	;;
+    *)
+	echo "postinst called with unknown argument \`$1'" >&2
+	;;
+esac

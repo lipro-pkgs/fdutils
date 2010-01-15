@@ -1,0 +1,47 @@
+# Translation of fdutils debconf templates to German
+# Copyright (C) Mathias Klein <ma_klein@gmx.de>, 2006.
+# Copyright (C) Helge Kreutzmann <debian@helgefjell.de>, 2008.
+# This file is distributed under the same license as the fdutils package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: fdutils 5.5-20060227-1.2\n"
+"Report-Msgid-Bugs-To: fdutils@packages.debian.org\n"
+"POT-Creation-Date: 2008-01-09 21:08+0100\n"
+"PO-Revision-Date: 2008-01-10 22:19+0100\n"
+"Last-Translator: Helge Kreutzmann <debian@helgefjell.de>\n"
+"Language-Team: de <debian-l10n-german@lists.debian.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ISO-8859-15\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Type: boolean
+#. Description
+#: ../templates:2001
+msgid "Should fdmount be installed 'setuid root'?"
+msgstr "Soll Fdmount »setuid root« installiert werden?"
+
+#. Type: boolean
+#. Description
+#: ../templates:2001
+msgid ""
+"In order to enable ordinary users to mount a floppy disk, the fdmount "
+"program can be installed with the set-user-ID bit set, so that it will run "
+"with the permissions of the superuser."
+msgstr ""
+"Um es normalen Benutzern zu erlauben, Disketten einzuhängen, kann das "
+"Programm Fdmount mit gesetztem set-user-ID-Bit installiert werden, so dass "
+"es mit den Rechten des Superusers (»root«) läuft."
+
+#. Type: boolean
+#. Description
+#: ../templates:2001
+msgid ""
+"Such a setting may have security implications in the case of vulnerabilities "
+"in fdmount's code."
+msgstr ""
+"Eine solche Einstellung könnte Auswirkungen auf die Sicherheit haben, falls "
+"im Code von Fdmount Verwundbarkeiten gefunden werden."
+
+#~ msgid "Do you want to make fdmount set-user-id root?"
+#~ msgstr "Möchten Sie für fdmount das SUID-Recht (set-user-id root) vergeben?"
