@@ -1,10 +1,12 @@
 Source: fdutils
 Section: utils
 Priority: optional
-Maintainer: Debian QA Group <packages@qa.debian.org>
+Maintainer: Matteo Cypriani <mcy@lm7.fr>
 Standards-Version: 3.8.3
 Build-Depends: debhelper (>= 7), autotools-dev, texi2html, flex, texlive, texinfo, po-debconf
 Homepage: http://www.tux.org/pub/knaff/fdutils/
+Vcs-Git: git://git.debian.org/git/collab-maint/fdutils.git
+Vcs-Browser: http://git.debian.org/?p=collab-maint/fdutils.git
 
 Package: fdutils
 Architecture: any

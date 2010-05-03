@@ -4,7 +4,7 @@ the beginning of year 2002 it was taken over by Jochen Voss
 <voss@debian.org>.
 
 This package is currently maintained by
-Anibal Monsalve Salazar <anibal@debian.org>.
+Matteo Cypriani <mcy@lm7.fr>.
 
 It was downloaded from
     ftp://ftp.tux.org/pub/knaff/fdutils/fdutils-5.5.tar.gz
@@ -12,7 +12,7 @@ It was downloaded from
 Copyright:
 
     fdutils -- Linux floppy utilities
-    Copyright (C) 1993-1999  Alain Knaff <alain@linux.lu>
+    Copyright (C) 1993-2006  Alain Knaff <alain@linux.lu>
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
