@@ -1,0 +1,9 @@
+Document: fdutils-faq
+Title: Fdutils FAQ
+Author: Alain Knaff <alain@knaff.lu>
+Abstract: Frequently asked question about the Linux floppy driver.
+Section: System/Hardware
+
+Format: HTML
+Index: /usr/share/doc/fdutils/FAQ.html
+Files: /usr/share/doc/fdutils/FAQ.html

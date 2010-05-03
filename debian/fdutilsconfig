@@ -1,0 +1,77 @@
+#!/bin/sh
+# /usr/sbin/fdutilsconfig - configuration script for suid bit of fdmount.
+# Originally written by Tibor Simko <simko@debian.org> for gnuplot.
+# Adapted by Anthony Fok <foka@debian.org> for fdmount in fdutils.
+# note: this script modifies `/etc/fdmount.conf' configuration file.
+
+set -e
+set -C
+
+if [ "root" != "`whoami`" ]
+then 
+   echo "Sorry, only root can run this script.  Exiting."
+   exit 1
+fi
+
+echo "Fdmount suid configuration:"
+echo
+
+if [ ! -e /etc/fdmount.conf ] 
+then 
+   echo "Sorry, /etc/fdmount.conf not found.  Exiting."
+   exit 1
+fi
+
+TMPFILE=`mktemp -q /tmp/fdmount.conf.tmp.XXXXXX`
+if [ $? -ne 0 ]; then
+    echo "$0: Can't create temp file, exiting..."
+    exit 1
+fi
+
+if grep -q "^is_suid=y.*$" /etc/fdmount.conf; then old=y; else old=n; fi
+
+while true; do
+
+if [ "$old" = "y" ] 
+then 
+   echo "  Currently, fdmount is set up as setuid root, beware!"
+else 
+   echo "  Currently, fdmount is not set up as setuid root.  Good."
+fi
+echo -n "  Do you want to change it?  (y/n/?) [n] "
+read yn
+echo
+test -n "$yn" || yn="n"
+case "$yn" in
+   [Nn]*)
+          echo "Okay, keeping the old configuration."
+          exit 0
+          ;;
+   [Yy]*)
+          if [ "$old" = "n" ]
+          then 
+            sed -e "s/^is_suid=.*$/is_suid=yes/" </etc/fdmount.conf >>$TMPFILE
+	    chmod 644 $TMPFILE
+            mv $TMPFILE /etc/fdmount.conf
+	    dpkg-statoverride --update --add root floppy 4750 /usr/bin/fdmount
+            exit 0
+          else
+            sed -e "s/^is_suid=.*$/is_suid=no/" </etc/fdmount.conf >>$TMPFILE
+	    chmod 644 $TMPFILE
+            mv $TMPFILE /etc/fdmount.conf
+            chmod u-s /usr/bin/fdmount
+	    dpkg-statoverride --remove /usr/bin/fdmount
+            echo "Okay, fdmount is not set up as setuid root anymore."
+            exit 0
+          fi
+          ;;
+      *)
+          echo "    In order to enable ordinary users to mount a floppy disk"
+          echo "    using fdmount, fdmount needs to be set up as setuid root."
+          echo "    Please note that this is usually considered to"
+          echo "    be a security hazard."
+          echo
+          ;;
+esac
+
+done

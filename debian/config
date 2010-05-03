@@ -1,0 +1,19 @@
+#! /bin/sh
+
+set -e
+
+. /usr/share/debconf/confmodule
+
+if [ -e /etc/fdmount.conf ]; then
+    if grep -q '^is_suid=y.*$' /etc/fdmount.conf; then
+	db_set fdutils/fdmount_setuid true
+    else
+	db_set fdutils/fdmount_setuid false
+    fi
+fi
+
+if [ "$1" = reconfigure ] || [ ! -e /etc/fdmount.conf ] \
+    || dpkg --compare-versions "$2" lt 5.2.0.1998-07-01-3; then
+    db_input medium fdutils/fdmount_setuid || true
+    db_go || true
+fi

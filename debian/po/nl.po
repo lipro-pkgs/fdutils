@@ -1,0 +1,58 @@
+# translation of fdutils_5.5-20060227-2.1_nl.po to Dutch
+#
+# This file is distributed under the same license as the fdutils package.
+# Please see debian/copyright.
+#
+#    Translators, if you are not familiar with the PO format, gettext
+#    documentation is worth reading, especially sections dedicated to
+#    this format, e.g. by running:
+#         info -n '(gettext)PO Files'
+#         info -n '(gettext)Header Entry'
+#    Some information specific to po-debconf are available at
+#            /usr/share/doc/po-debconf/README-trans
+#         or http://www.debian.org/intl/l10n/po-debconf/README-trans#
+#    Developers do not need to manually edit POT or PO files.
+#
+# Paul Gevers <paul@climbing.nl>, 2008.
+msgid ""
+msgstr ""
+"Project-Id-Version: fdutils_5.5-20060227-2.1_nl\n"
+"Report-Msgid-Bugs-To: fdutils@packages.debian.org\n"
+"POT-Creation-Date: 2008-01-09 21:08+0100\n"
+"PO-Revision-Date: 2008-10-06 21:32-0600\n"
+"Last-Translator: Paul Gevers <paul@climbing.nl>\n"
+"Language-Team: Dutch <debian-l10n-dutch@lists.debian.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. Type: boolean
+#. Description
+#: ../templates:2001
+msgid "Should fdmount be installed 'setuid root'?"
+msgstr "Wilt u dat fdmount wordt geïnstalleerd met setuid-toegangsrechten?"
+
+#. Type: boolean
+#. Description
+#: ../templates:2001
+msgid ""
+"In order to enable ordinary users to mount a floppy disk, the fdmount "
+"program can be installed with the set-user-ID bit set, so that it will run "
+"with the permissions of the superuser."
+msgstr ""
+"Om het voor gewone gebruikers mogelijk te maken om een diskette aan te "
+"koppelen, kunt u ervoor kiezen om de toegangsrechten van fdmount via set-"
+"user-id voor root in te stellen. Zo kan fdmount gedraaid worden met de "
+"rechten van de systeembeheerder."
+
+#. Type: boolean
+#. Description
+#: ../templates:2001
+msgid ""
+"Such a setting may have security implications in the case of vulnerabilities "
+"in fdmount's code."
+msgstr ""
+"Het gebruik van deze constructie kan een veiligheidsrisico zijn indien er "
+"kwetsbaarheden in de code van fdmount blijken te zitten."

@@ -1,0 +1,46 @@
+# Galician translation of fdutils's debconf templates
+# This file is distributed under the same license as the fdutils package.
+# Jacobo Tarrio <jtarrio@debian.org>, 2007.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: fdutils\n"
+"Report-Msgid-Bugs-To: fdutils@packages.debian.org\n"
+"POT-Creation-Date: 2008-01-09 21:08+0100\n"
+"PO-Revision-Date: 2008-01-09 23:44+0000\n"
+"Last-Translator: Jacobo Tarrio <jtarrio@debian.org>\n"
+"Language-Team: Galician <proxecto@trasno.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Type: boolean
+#. Description
+#: ../templates:2001
+msgid "Should fdmount be installed 'setuid root'?"
+msgstr "¿Quere instalar fdmount con \"setuid root\"?"
+
+#. Type: boolean
+#. Description
+#: ../templates:2001
+msgid ""
+"In order to enable ordinary users to mount a floppy disk, the fdmount "
+"program can be installed with the set-user-ID bit set, so that it will run "
+"with the permissions of the superuser."
+msgstr ""
+"Para permitirlle aos usuarios normais montar un disquete, pódese instalar o "
+"programa fdmount co bit de set-user-ID establecido para que funcione cos "
+"permisos do superusuario."
+
+#. Type: boolean
+#. Description
+#: ../templates:2001
+msgid ""
+"Such a setting may have security implications in the case of vulnerabilities "
+"in fdmount's code."
+msgstr ""
+"Esta configuración pode causar problemas se aparecen vulnerabilidades no "
+"código de fdmount."
+
+#~ msgid "Do you want to make fdmount set-user-id root?"
+#~ msgstr "¿Quere darlle autoridade de administrador a fdmount?"
