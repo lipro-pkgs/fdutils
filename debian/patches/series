@@ -1,0 +1,9 @@
+documentation-typos.patch
+mediaprm-typo.patch
+floppymeter-confirmation_message.patch
+MAKEFLOPPIES-chown_separator.patch
+MAKEFLOPPIES-xsiisms.patch
+MAKEFLOPPIES-devfs.patch
+superformat-devfs_floppy.patch
+superformat-env_variables.patch
+fdmount-compilation_linux_2.5.999-test7-bk-9.patch

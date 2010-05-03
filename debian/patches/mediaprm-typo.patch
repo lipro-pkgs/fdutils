@@ -1,0 +1,15 @@
+Subject: Fix a typo in the floppy disk parameter table
+---
+diff --git a/src/mediaprm b/src/mediaprm
+index 667c5b9..d12bd7a 100644
+--- a/src/mediaprm
++++ b/src/mediaprm
+@@ -774,7 +774,7 @@
+ # CMD FD2000 disk drive, a third party floppy disk drive for the
+ # Commodore line of computers with double of the capacity:
+ "CMDFD2M":
+-  DS HD sect=10 cyl=81 ssize=1024 fmt_gap=100 gap=12 swapsides
++ DS HD sect=10 cyl=81 ssize=1024 fmt_gap=100 gap=12 swapsides
+ 
+ # Color computer, sides 1 and 2
+ "COCO1":

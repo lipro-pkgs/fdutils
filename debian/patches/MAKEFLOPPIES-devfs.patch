@@ -1,0 +1,22 @@
+Subject: [MAKEFLOPPIES] Exit if devfs is detected
+Author: Taral <taral@taral.net>
+Bug-Debian: http://bugs.debian.org/96845
+---
+diff --git a/src/MAKEFLOPPIES b/src/MAKEFLOPPIES
+index 91fad1e..9ad113a 100755
+--- a/src/MAKEFLOPPIES
++++ b/src/MAKEFLOPPIES
+@@ -10,6 +10,13 @@
+ 
+ set -e
+ set -u
++
++# check for devfs
++if [ -e /dev/.devfsd ]; then
++    echo "devfs found, skipping MAKEFLOPPIES..." >&2
++    exit 0
++fi
++
+ MAJOR=2
+ TMPDEVICE=/dev/tmpfloppy$$
+ if [ ! -b /dev/fd0 ] ; then
