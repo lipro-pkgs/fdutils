@@ -486,21 +486,6 @@ void old_parameters()
 
 #define DRIVE_DEFAULTS (drive_defaults[drivedesc.type.cmos])
 
-static int
-file_exists (const char *filename)
-{
-  struct stat  buf;
-  int  res;
-  res = stat (filename, &buf);
-  if (! res)  return 1;
-  if (res && errno != ENOENT) {
-    fprintf (stderr, "error: cannot stat %s (%s)\n",
-	     filename, strerror (errno));
-    exit (1);
-  }
-  return 0;
-}
-
 int main(int argc, char **argv)
 {
 	int nseqs; /* number of sequences used */
@@ -509,7 +494,7 @@ int main(int argc, char **argv)
 	struct params fd[MAX_SECTORS], fd0;
 	int ch,i;
 	short density = DENS_UNKNOWN;
-	char drivename[15];
+	char drivename[10];
 
 	int have_geom = 0;
 	int margin=50;
@@ -771,12 +756,7 @@ int main(int argc, char **argv)
 				ioctl(fd[0].fd, FDGETPRM, &geometry);
 			have_geom = 1;
 			close(fd[0].fd);
-
-			if (file_exists ("/dev/.devfsd")) {
-			  snprintf(drivename,14,"/dev/floppy/%d", fd[0].drive);
-			} else {
-			  snprintf(drivename,9,"/dev/fd%d", fd[0].drive);
-			}
+			snprintf(drivename,9,"/dev/fd%d", fd[0].drive);
 			fd[0].name = drivename;
 			continue;
 		}
