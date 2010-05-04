@@ -1,4 +1,5 @@
 documentation-typos.patch
+documentation-spelling_errors.patch
 mediaprm-typo.patch
 floppymeter-confirmation_message.patch
 MAKEFLOPPIES-chown_separator.patch
