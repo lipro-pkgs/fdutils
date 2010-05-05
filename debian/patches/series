@@ -1,6 +1,6 @@
 documentation-typos.patch
 documentation-spelling_errors.patch
-mediaprm-typo.patch
+mediaprm-fix_etc-fdprm.patch
 floppymeter-confirmation_message.patch
 MAKEFLOPPIES-chown_separator.patch
 MAKEFLOPPIES-xsiisms.patch
