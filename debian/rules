@@ -23,7 +23,9 @@ export INSTALL_PROGRAM
 build: build-stamp
 build-stamp:
 	dh_testdir
-	cp -f /usr/share/misc/config.guess /usr/share/misc/config.sub .
+	autoreconf -vfi
+	ln -sf /usr/share/misc/config.guess .
+	ln -sf /usr/share/misc/config.sub .
 	./configure --prefix=/usr --sysconfdir=/etc \
 		--infodir='$${prefix}/share/info' \
 		--mandir='$${prefix}/share/man'
@@ -39,7 +41,8 @@ clean:
 	[ ! -f Makefile ] || $(MAKE) clean
 	rm -f doc/texi-linearize doc/Fdutils.texi doc/Fdutils.html src/floppymeter src/convertfdprm
 	rm -f Makefile src/Makefile doc/Makefile
-	rm -f config.log config.cache config.status config.h config.guess config.sub
+	rm -f configure config.log config.cache config.status config.h config.h.in config.guess config.sub
+	rm -fr autom4te.cache */autom4te.cache
 	dh_clean
 
 # Build architecture-independent files here.
