@@ -1,87 +1,36 @@
 #!/usr/bin/make -f
+# -*- makefile -*-
 
 # Uncomment this to turn on verbose mode.
 export DH_VERBOSE=1
+export DH_OPTIONS=-v
 
-# support the DEB_BUILD_OPTIONS variable
-CFLAGS = -Wall -g
-LDFLAGS = -g
-ifneq (,$(findstring noopt,$(DEB_BUILD_OPTIONS)))
-  CFLAGS += -O0
-else
-  CFLAGS += -O2
-endif
-export CFLAGS
-export LDFLAGS
+%:
+	dh --with autotools-dev $@
 
-INSTALL_PROGRAM = /usr/bin/install -p
-ifeq (,$(findstring nostrip,$(DEB_BUILD_OPTIONS)))
-  INSTALL_PROGRAM += -s
-endif
-export INSTALL_PROGRAM
-
-build: build-stamp
-build-stamp:
-	dh_testdir
-	autoreconf -vfi
-	ln -sf /usr/share/misc/config.guess .
-	ln -sf /usr/share/misc/config.sub .
-	./configure --prefix=/usr --sysconfdir=/etc \
-		--infodir='$${prefix}/share/info' \
-		--mandir='$${prefix}/share/man'
-
-	$(MAKE) all html
-	touch build-stamp
-
-clean:
-	dh_testdir
-	dh_testroot
-	rm -f build-stamp
-	[ ! -f Makefile ] || $(MAKE) -C src spotless
-	[ ! -f Makefile ] || $(MAKE) clean
-	rm -f doc/texi-linearize doc/Fdutils.texi doc/Fdutils.html src/floppymeter src/convertfdprm
+override_dh_auto_clean:
+	dh_auto_clean
+	[ ! -f src/Makefile ] || $(MAKE) -C src spotless
+	rm -f doc/texi-linearize doc/Fdutils.texi doc/Fdutils.html \
+		src/floppymeter src/convertfdprm
 	rm -f Makefile src/Makefile doc/Makefile
-	rm -f configure config.log config.cache config.status config.h config.h.in config.guess config.sub
+	rm -f configure config.log config.cache config.status config.h \
+		config.h.in
 	rm -fr autom4te.cache */autom4te.cache
-	dh_clean
 
-# Build architecture-independent files here.
-binary-indep: build
-# We have nothing to do by default.
+override_dh_auto_configure:
+	autoreconf -vfi
+	dh_auto_configure
 
-# Build architecture-dependent files here.
-binary-arch: build
-	dh_testdir
-	dh_testroot
-	dh_prep
-	dh_installdirs usr/share/lintian/overrides
+override_dh_auto_build:
+	dh_auto_build -- all html
 
-	$(MAKE) install prefix=`pwd`/debian/fdutils/usr \
-					sysconfdir=`pwd`/debian/fdutils/etc
-	( cd debian/fdutils/usr/share/man && mv man1/makefloppies.1 man8/MAKEFLOPPIES.8 )
-	chown root:floppy debian/fdutils/usr/bin/fdmount
-	chmod 750 debian/fdutils/usr/bin/fdmount
-	( cd debian/fdutils && mv usr/bin/MAKEFLOPPIES usr/sbin/ )
-	install -p -m 644 debian/fdmount.conf debian/fdutils/etc/
-	install -p -m 755 debian/fdutilsconfig debian/fdutils/usr/sbin/
-	install -p -m 644 debian/fdutilsconfig.8 debian/fdutils/usr/share/man/man8/
+override_dh_auto_install:
+	dh_auto_install
+	( cd debian/fdutils && \
+		mv usr/bin/MAKEFLOPPIES usr/sbin )
 
-	cp debian/fdutils.lintian-overrides debian/fdutils/usr/share/lintian/overrides/fdutils
-
-	dh_installdocs CREDITS doc/README doc/*.html doc/*.dvi \
-		doc/floppy_formats
-
+override_dh_installman:
 	dh_installman
-	dh_installchangelogs Changelog
-	dh_installdebconf
-	dh_strip 
-	dh_compress
-	dh_fixperms
-	dh_installdeb
-	dh_shlibdeps
-	dh_gencontrol
-	dh_md5sums
-	dh_builddeb
-
-binary: binary-indep binary-arch
-.PHONY: build clean binary-indep binary-arch binary
+	( cd debian/fdutils/usr/share/man && \
+		mv man1/makefloppies.1 man8/MAKEFLOPPIES.8 )

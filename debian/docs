@@ -1,0 +1,5 @@
+CREDITS
+doc/README
+doc/*.html
+doc/*.dvi
+doc/floppy_formats
