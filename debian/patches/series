@@ -1,3 +1,4 @@
+makefile-destdir.patch
 documentation-typos.patch
 documentation-spelling_errors.patch
 mediaprm-fix_etc-fdprm.patch
