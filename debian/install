@@ -1,0 +1,2 @@
+debian/fdmount.conf etc
+debian/fdutilsconfig usr/sbin
