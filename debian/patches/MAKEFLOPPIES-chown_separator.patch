@@ -1,12 +1,9 @@
 Subject: [MAKEFLOPPIES] Fix the chown calls to use ':' instead of '.'
 Author: Jochen Voss <voss@debian.org>
 Bug-Debian: http://bugs.debian.org/205367
----
-diff --git a/src/MAKEFLOPPIES b/src/MAKEFLOPPIES
-index 91fad1e..c8cdb43 100755
 --- a/src/MAKEFLOPPIES
 +++ b/src/MAKEFLOPPIES
-@@ -216,7 +216,7 @@ for DRIVE in $DRIVES; do
+@@ -216,7 +216,7 @@
  	echo "Creating \"$FILE\", ID=$DRIVE, Type=$CMOS ($CN)"
  	if [ -z "$DRYRUN" ]; then
  		mknod "$FILE" b "$MAJOR" "$BASENUMBER"
@@ -15,7 +12,7 @@ index 91fad1e..c8cdb43 100755
  		chmod ${PERMISSION} "$FILE"
  	fi
  	if [ -n "$VERBOSE" -o -n "$DRYRUN" ]; then
-@@ -240,7 +240,7 @@ for DRIVE in $DRIVES; do
+@@ -240,7 +240,7 @@
  			fi
  			if [ -z "$DRYRUN" ]; then
  				mknod "${FILE}${NAME}" b "$MAJOR" "$MINOR"

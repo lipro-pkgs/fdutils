@@ -1,12 +1,9 @@
 Subject: [MAKEFLOPPIES] Remove XSIisms and replace use of /bin/bash with /bin/sh
 Author: David Weinehall <tao@acc.umu.se>
 Bug-Debian: http://bugs.debian.org/254933
----
-diff --git a/src/MAKEFLOPPIES b/src/MAKEFLOPPIES
-index ca1e557..9127d97 100755
 --- a/src/MAKEFLOPPIES
 +++ b/src/MAKEFLOPPIES
-@@ -54,7 +54,7 @@ getword ()
+@@ -47,7 +47,7 @@
  {	if [ $# -lt 1 ]; then
  		return
  	fi
@@ -15,7 +12,7 @@ index ca1e557..9127d97 100755
  		return
  	fi
  	shift $1
-@@ -108,7 +108,7 @@ cmosid ()
+@@ -101,7 +101,7 @@
  # main()
  
  PERMISSION=666
@@ -24,7 +21,7 @@ index ca1e557..9127d97 100755
  	if [ -n "$REMAINDER" ]; then
  		## Continue processing options stuck together
  		ARG=$REMAINDER
-@@ -210,13 +210,13 @@ for DRIVE in $DRIVES; do
+@@ -203,13 +203,13 @@
  	fi
  
  	FORMATS=`getword "$CMOS" $CMOSFORMATS`
@@ -40,7 +37,7 @@ index ca1e557..9127d97 100755
  		echo "Skipping invalid drive \"$FILE\"" >&2
  		continue
  	fi
-@@ -226,7 +226,7 @@ for DRIVE in $DRIVES; do
+@@ -219,7 +219,7 @@
  		chown root:floppy "$FILE"
  		chmod ${PERMISSION} "$FILE"
  	fi
@@ -49,7 +46,7 @@ index ca1e557..9127d97 100755
  		echo mknod "$FILE" b "$MAJOR" "$BASENUMBER"
  	fi
  
-@@ -250,7 +250,7 @@ for DRIVE in $DRIVES; do
+@@ -243,7 +243,7 @@
  				chown root:floppy "${FILE}${NAME}"
  				chmod ${PERMISSION} "${FILE}${NAME}"
  			fi

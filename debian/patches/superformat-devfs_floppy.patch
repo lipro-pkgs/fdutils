@@ -1,12 +1,9 @@
 Subject: [superformat] Use /dev/floppy/%d instead of /dev/fd%d on devfs-systems
 Author: Jochen Voss <voss@debian.org>
 Bug-Debian: http://bugs.debian.org/110225
----
-diff --git a/src/superformat.c b/src/superformat.c
-index 48e3247..99ec847 100644
 --- a/src/superformat.c
 +++ b/src/superformat.c
-@@ -486,6 +486,21 @@ void old_parameters()
+@@ -486,6 +486,21 @@
  
  #define DRIVE_DEFAULTS (drive_defaults[drivedesc.type.cmos])
  
@@ -28,7 +25,7 @@ index 48e3247..99ec847 100644
  int main(int argc, char **argv)
  {
  	int nseqs; /* number of sequences used */
-@@ -494,7 +509,7 @@ int main(int argc, char **argv)
+@@ -494,7 +509,7 @@
  	struct params fd[MAX_SECTORS], fd0;
  	int ch,i;
  	short density = DENS_UNKNOWN;
@@ -37,7 +34,7 @@ index 48e3247..99ec847 100644
  
  	int have_geom = 0;
  	int margin=50;
-@@ -756,7 +771,12 @@ int main(int argc, char **argv)
+@@ -756,7 +771,12 @@
  				ioctl(fd[0].fd, FDGETPRM, &geometry);
  			have_geom = 1;
  			close(fd[0].fd);

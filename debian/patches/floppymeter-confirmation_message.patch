@@ -2,12 +2,9 @@ Subject: [floppymeter] Improve initial confirmation message
 Author: Jari Aalto <jari.aalto@cante.net>
 Bug-Debian: http://bugs.debian.org/306097
 Bug-Debian: http://bugs.debian.org/298046
----
-diff --git a/src/floppymeter.c b/src/floppymeter.c
-index 120a7b9..51f16a3 100644
 --- a/src/floppymeter.c
 +++ b/src/floppymeter.c
-@@ -154,8 +154,9 @@ int main(int argc, char **argv)
+@@ -154,8 +154,9 @@
  
  	if(!(mask & NON_INTERACTIVE)) {
  		fprintf(stderr,
