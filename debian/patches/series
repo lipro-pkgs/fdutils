@@ -2,6 +2,7 @@ makefile-destdir.patch
 documentation-typos.patch
 documentation-spelling_errors.patch
 documentation-man_undefined_macros.patch
+documentation-man_hyphens.patch
 documentation-info_metadata.patch
 mediaprm-fix_etc-fdprm.patch
 floppymeter-confirmation_message.patch
