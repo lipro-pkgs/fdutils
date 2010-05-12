@@ -27,7 +27,7 @@ Bug-Debian: http://bugs.debian.org/519224
  "COCO1":
 --- a/doc/setfdprm.1
 +++ b/doc/setfdprm.1
-@@ -97,7 +97,7 @@
+@@ -90,7 +90,7 @@
  .PP
  Without any options, \fR\&\f(CWsetfdprm\fR loads the \fIdevice\fR (for example
  \&\fR\&\f(CW\(if/dev/fd0\(is\fR or \fR\&\f(CW\(if/dev/fd1\(is\fR) with a new parameter set with the
@@ -36,7 +36,7 @@ Bug-Debian: http://bugs.debian.org/519224
  etc.).  For autodetecting floppy devices, these parameters stay in
  effect until the media is changed. For "fixed parameter" devices, they
  stay in effect until they are changed again.
-@@ -111,7 +111,7 @@
+@@ -104,7 +104,7 @@
  \&\fR\&\f(CW-p\ \fIdevice\ name\fR\&\f(CW\fR\ 
  Permanently loads a new parameter set for the specified auto-configuring
  floppy device for the configuration with \fIname\fR in
