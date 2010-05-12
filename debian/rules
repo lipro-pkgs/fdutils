@@ -11,12 +11,6 @@ export DH_OPTIONS=-v
 override_dh_auto_clean:
 	dh_auto_clean
 	[ ! -f src/Makefile ] || $(MAKE) -C src spotless
-	rm -f doc/texi-linearize doc/Fdutils.texi doc/Fdutils.html \
-		src/floppymeter src/convertfdprm
-	rm -f Makefile src/Makefile doc/Makefile
-	rm -f configure config.log config.cache config.status config.h \
-		config.h.in
-	rm -fr autom4te.cache */autom4te.cache
 
 override_dh_auto_configure:
 	autoreconf -vfi

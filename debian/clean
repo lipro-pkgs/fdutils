@@ -1,0 +1,14 @@
+doc/texi-linearize
+doc/Fdutils.texi
+doc/Fdutils.html
+src/floppymeter
+src/convertfdprm
+Makefile
+src/Makefile
+doc/Makefile
+configure
+config.log
+config.cache
+config.status
+config.h
+config.h.in
