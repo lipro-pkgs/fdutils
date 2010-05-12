@@ -1,3 +1,29 @@
+fdutils (5.5-20060227-5) UNRELEASED; urgency=low
+
+  * Adoption (Closes: #565466).
+  * Bump Standards-Version to 3.8.4.
+  * Switch to 3.0 (quilt) source format.
+  * Switch to debhelper 7.0.50~
+    - Update rules to use dh.
+    - Add DESTDIR support in makefiles.
+    - Add debian/fdutils.manpages.
+    - Add debian/clean.
+    - Add debian/install.
+    - Add debian/fdutils.info.
+  * Doc spell-check (Closes: #395428, #525257).
+  * Change all occurrences to the old file /etc/fdprm to /etc/mediaprm
+    (Closes: #519224).
+  * Fix architecture list (fdutils is Linux specific).
+  * Fix lintian error info-document-missing-dir-section.
+  * Fix lintian warning manpage-has-errors-from-man.
+  * Fix lintian minor warning hyphen-used-as-minus-sign.
+  * Update Linux 2.5.999 patch.
+  * Delete useless files:
+    - debian/dirs
+    - debian/fdutils.lintian-overrides
+
+ -- Matteo Cypriani <mcy@lm7.fr>  Tue, 25 May 2010 23:47:38 +0200
+
 fdutils (5.5-20060227-4) unstable; urgency=low
 
   * QA upload.
