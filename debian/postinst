@@ -7,9 +7,6 @@ set -e
 
 case "$1" in
     configure)
-	install-info --description='Linux floppy utilities' \
-	    --section "Disk Management" "Disk Management" \
-	    --quiet /usr/share/info/fdutils.info.gz
 
 	if [ -e /etc/fdmount.conf ]; then
 	    TMPFILE="$(mktemp -q /tmp/fdmount.conf.tmp.XXXXXX)"
