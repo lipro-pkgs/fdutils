@@ -5,6 +5,7 @@ documentation-man_undefined_macros.patch
 documentation-man_hyphens.patch
 documentation-info_metadata.patch
 documentation-superformat_print_drive_deviation.patch
+documentation-section_media_description.patch
 mediaprm-fix_etc-fdprm.patch
 floppymeter-confirmation_message.patch
 MAKEFLOPPIES-chown_separator.patch
