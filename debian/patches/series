@@ -10,6 +10,7 @@ floppymeter-confirmation_message.patch
 MAKEFLOPPIES-chown_separator.patch
 MAKEFLOPPIES-xsiisms.patch
 MAKEFLOPPIES-devfs.patch
+MAKEFLOPPIES-usage.patch
 superformat-devfs_floppy.patch
 superformat-env_variables.patch
 superformat-verify_later.patch
