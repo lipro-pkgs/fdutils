@@ -1,38 +1,44 @@
-This package was debianized by Vaidhyanathan G Mayilrangam
-<vaidhy@debian.org> on Thu, 25 Nov 1999 11:54:01 -0500.  At
-the beginning of year 2002 it was taken over by Jochen Voss
-<voss@debian.org>.
+Format: http://svn.debian.org/wsvn/dep/web/deps/dep5.mdwn?op=file&rev=166
+Upstream-Name: Linux floppy utilities
+Upstream-Contact: Alain Knaff <alain@knaff.lu>
+Source: http://www.tux.org/pub/knaff/fdutils/fdutils-5.5.tar.gz
 
-This package is currently maintained by
-Matteo Cypriani <mcy@lm7.fr>.
+Files: *
+Copyright: 1993-2006 Alain Knaff <alain@linux.lu>
+License: GPL-2+
 
-It was downloaded from
-    ftp://ftp.tux.org/pub/knaff/fdutils/fdutils-5.5.tar.gz
-
+Files: debian/*
 Copyright:
+ 1996, 1997 Mark W. Eichin <eichin@kitten.gen.ma.us>
+ 1997-1999 Anthony Fok <foka@debian.org>
+ 1999 Vaidhyanathan G Mayilrangam <vaidhy@debian.org>
+ 2001 Anthony Towns <aj@azure.humbug.org.au>
+ 2001 LaMont Jones <lamont@debian.org>
+ 2001 Bas Zoetekouw <bas@debian.org>
+ 2002 Steve Kowalik <stevenk@debian.org>
+ 2002 Matt Zimmerman <mdz@debian.org>
+ 2002-2005 Jochen Voss <voss@debian.org>
+ 2005, 2006 Anibal Monsalve Salazar <anibal@debian.org>
+ 2007, 2008 Christian Perrier <bubulle@debian.org>
+ 2008, 2010 Anibal Monsalve Salazar <anibal@debian.org>
+ 2010-2011 Matteo Cypriani <mcy@lm7.fr>
+License: GPL-2+
 
-    fdutils -- Linux floppy utilities
-    Copyright (C) 1993-2006  Alain Knaff <alain@linux.lu>
-
-    This program is free software; you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation; either version 2 of the License, or
-    (at your option) any later version.
-
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
-
-    You should have received a copy of the GNU General Public License
-    along with this program; if not, write to the Free Software
-    Foundation, Inc., 51 Franklin St, Fifth Floor, Boston,
-    MA 02110-1301, USA.
-
-
-All the other scripts and control files for building and installing
-fdutils under Debian GNU/Linux are also under the GNU General Public
-License (GPL) version 2 or later.
-
-On Debian GNU/Linux systems, the complete text of the GNU General
-Public License can be found in '/usr/share/common-licenses/GPL-2'.
+License: GPL-2+
+ This program is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 2 of the License, or
+ (at your option) any later version.
+ .
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program; if not, write to the Free Software
+ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston,
+ MA 02110-1301, USA.
+ .
+ On Debian systems, the full text of the GNU General Public License
+ version 2 can be found in the file '/usr/share/common-licenses/GPL-2'.
