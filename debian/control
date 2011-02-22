@@ -2,7 +2,7 @@ Source: fdutils
 Section: utils
 Priority: optional
 Maintainer: Matteo Cypriani <mcy@lm7.fr>
-Standards-Version: 3.8.4
+Standards-Version: 3.9.1.0
 Build-Depends: debhelper (>= 7.0.50~), autoconf, autotools-dev, texi2html, flex, texlive, texinfo, po-debconf
 Homepage: http://www.tux.org/pub/knaff/fdutils/
 Vcs-Git: git://git.debian.org/git/collab-maint/fdutils.git
