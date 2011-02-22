@@ -1,4 +1,4 @@
-fdutils (5.5-20060227-5) UNRELEASED; urgency=low
+fdutils (5.5-20060227-5) unstable; urgency=low
 
   * Adoption (Closes: #565466).
   * Bump Standards-Version to 3.9.1.0.
@@ -10,6 +10,8 @@ fdutils (5.5-20060227-5) UNRELEASED; urgency=low
     - Add debian/clean.
     - Add debian/install.
     - Add debian/fdutils.info.
+  * Convert debian/copyright to DEP5 format.
+  * Update Homepage in debian/control.
   * Doc spell-check (Closes: #395428, #525257).
   * Change all occurrences to the old file /etc/fdprm to /etc/mediaprm
     (Closes: #519224).
@@ -17,17 +19,17 @@ fdutils (5.5-20060227-5) UNRELEASED; urgency=low
   * Fix lintian error info-document-missing-dir-section.
   * Fix lintian warning manpage-has-errors-from-man.
   * Fix lintian minor warning hyphen-used-as-minus-sign.
-  * Delete useless files:
-    - debian/dirs
-    - debian/fdutils.lintian-overrides
+  * Delete useless debian/fdutils.lintian-overrides.
+  * Update debian/dirs.
   * [fdmount] Update Linux 2.5.999 patch (becomes Linux 2.6 patch).
   * [superformat] Fix --verify_later (Closes: #331488).
   * [superformat] Document --print-drive-deviation (Closes: #331491).
   * [superformat] Document better --print-drive-deviation (Closes: #331489).
   * [MAKEFLOPPIES] Fix usage printing (Closes: #275877).
   * Media description in manpages (Closes: #282014).
+  * Add Brazilian Portuguese translation for debconf (Closes: #610406).
 
- -- Matteo Cypriani <mcy@lm7.fr>  Tue, 22 Feb 2011 14:28:05 +0100
+ -- Matteo Cypriani <mcy@lm7.fr>  Tue, 22 Feb 2011 23:52:11 +0100
 
 fdutils (5.5-20060227-4) unstable; urgency=low
 
