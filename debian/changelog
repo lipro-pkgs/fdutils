@@ -1,7 +1,7 @@
 fdutils (5.5-20060227-5) UNRELEASED; urgency=low
 
   * Adoption (Closes: #565466).
-  * Bump Standards-Version to 3.8.4.
+  * Bump Standards-Version to 3.9.1.0.
   * Switch to 3.0 (quilt) source format.
   * Switch to debhelper 7.0.50~
     - Update rules to use dh.
@@ -17,12 +17,17 @@ fdutils (5.5-20060227-5) UNRELEASED; urgency=low
   * Fix lintian error info-document-missing-dir-section.
   * Fix lintian warning manpage-has-errors-from-man.
   * Fix lintian minor warning hyphen-used-as-minus-sign.
-  * Update Linux 2.5.999 patch.
   * Delete useless files:
     - debian/dirs
     - debian/fdutils.lintian-overrides
+  * [fdmount] Update Linux 2.5.999 patch (becomes Linux 2.6 patch).
+  * [superformat] Fix --verify_later (Closes: #331488).
+  * [superformat] Document --print-drive-deviation (Closes: #331491).
+  * [superformat] Document better --print-drive-deviation (Closes: #331489).
+  * [MAKEFLOPPIES] Fix usage printing (Closes: #275877).
+  * Media description in manpages (Closes: #282014).
 
- -- Matteo Cypriani <mcy@lm7.fr>  Tue, 25 May 2010 23:47:38 +0200
+ -- Matteo Cypriani <mcy@lm7.fr>  Tue, 22 Feb 2011 14:28:05 +0100
 
 fdutils (5.5-20060227-4) unstable; urgency=low
 
