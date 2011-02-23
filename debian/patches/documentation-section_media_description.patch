@@ -27,7 +27,7 @@ Bug-Debian: http://bugs.debian.org/282014
  .SH See Also
 --- a/doc/superformat.1
 +++ b/doc/superformat.1
-@@ -293,6 +293,16 @@
+@@ -295,6 +295,16 @@
  sectors. In reality, superformat expects the skews to be expressed in
  raw bytes.
  .PP
