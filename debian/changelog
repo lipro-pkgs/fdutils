@@ -1,8 +1,8 @@
 fdutils (5.5-20060227-5) unstable; urgency=low
 
   * Adoption (Closes: #565466).
-  * Bump Standards-Version to 3.9.1.0.
-  * Switch to 3.0 (quilt) source format.
+  * Bump Standards-Version to 3.9.2.0.
+  * Switch to 3.0 (quilt) source format (follow DEP3).
   * Switch to debhelper 7.0.50~
     - Update rules to use dh.
     - Add DESTDIR support in makefiles.
@@ -29,7 +29,7 @@ fdutils (5.5-20060227-5) unstable; urgency=low
   * Media description in manpages (Closes: #282014).
   * Add Brazilian Portuguese translation for debconf (Closes: #610406).
 
- -- Matteo Cypriani <mcy@lm7.fr>  Tue, 22 Feb 2011 23:52:11 +0100
+ -- Matteo Cypriani <mcy@lm7.fr>  Tue, 12 Apr 2011 14:22:54 +0200
 
 fdutils (5.5-20060227-4) unstable; urgency=low
 
