@@ -28,8 +28,9 @@ fdutils (5.5-20060227-5) unstable; urgency=low
   * [MAKEFLOPPIES] Fix usage printing (Closes: #275877).
   * Media description in manpages (Closes: #282014).
   * Add Brazilian Portuguese translation for debconf (Closes: #610406).
+  * Add Danish translation for debconf (Closes: #623083).
 
- -- Matteo Cypriani <mcy@lm7.fr>  Tue, 12 Apr 2011 14:22:54 +0200
+ -- Matteo Cypriani <mcy@lm7.fr>  Fri, 22 Apr 2011 16:10:47 +0200
 
 fdutils (5.5-20060227-4) unstable; urgency=low
 
