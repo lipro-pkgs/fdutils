@@ -11,6 +11,7 @@ fdutils (5.5-20060227-5) unstable; urgency=low
     - Add debian/install.
     - Add debian/fdutils.info.
   * Convert debian/copyright to DEP5 format.
+  * Add automake to Build-Depends.
   * Update Homepage in debian/control.
   * Doc spell-check (Closes: #395428, #525257).
   * Change all occurrences to the old file /etc/fdprm to /etc/mediaprm
@@ -30,7 +31,7 @@ fdutils (5.5-20060227-5) unstable; urgency=low
   * Add Brazilian Portuguese translation for debconf (Closes: #610406).
   * Add Danish translation for debconf (Closes: #623083).
 
- -- Matteo Cypriani <mcy@lm7.fr>  Fri, 22 Apr 2011 16:10:47 +0200
+ -- Matteo Cypriani <mcy@lm7.fr>  Thu, 05 May 2011 16:09:37 +0200
 
 fdutils (5.5-20060227-4) unstable; urgency=low
 
