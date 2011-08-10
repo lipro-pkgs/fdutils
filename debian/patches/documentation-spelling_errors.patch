@@ -1054,6 +1054,15 @@ Bug-Debian: http://bugs.debian.org/525257
  the info version certain examples are difficult to read due to the
  quoting conventions used in info.
  .SH Description
+@@ -102,7 +102,7 @@
+ \&\fR\&\f(CWmformat\fR in order to put an MS-DOS filesystem on it. You may
+ ignore this filesystem, if you don't need it.
+ .PP
+-Superformat allows to format 2m formats.  Be aware, however, that these
++Superformat allows one to format 2m formats.  Be aware, however, that these
+ \&\fR\&\f(CW2m\fR formats were specifically designed to hold an MS-DOS
+ filesystem, and that they take advantage of the fact that the MS-DOS
+ filesystem uses redundant sectors on the first track (the FAT, which is
 --- a/doc/utilities.texi
 +++ b/doc/utilities.texi
 @@ -19,7 +19,7 @@
@@ -1119,3 +1128,14 @@ Bug-Debian: http://bugs.debian.org/525257
  superformat - format floppies
 -xdfcopy - Program to copy and format Xdf disks in Linux
 +xdfcopy - copy and format XDF disks in Linux
+--- a/doc/superformat.texi
++++ b/doc/superformat.texi
+@@ -24,7 +24,7 @@
+ @code{mformat} in order to put an MS-DOS filesystem on it. You may
+ ignore this filesystem, if you don't need it.
+ 
+-Superformat allows to format 2m formats.  Be aware, however, that these
++Superformat allows one to format 2m formats.  Be aware, however, that these
+ @code{2m} formats were specifically designed to hold an MS-DOS
+ filesystem, and that they take advantage of the fact that the MS-DOS
+ filesystem uses redundant sectors on the first track (the FAT, which is
