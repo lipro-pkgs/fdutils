@@ -1,6 +1,7 @@
 Description: [fdmount] Allow compilation of fdutils with linux-kernel-headers 2.5.999-test7-bk-9
  This patch is still needed with Linux 2.6.
 Author: Jochen Voss <voss@debian.org>
+Last-Update: 2010-05-12
 --- /dev/null
 +++ b/src/ext2-stuff.h
 @@ -0,0 +1,95 @@

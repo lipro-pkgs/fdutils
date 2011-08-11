@@ -1,6 +1,7 @@
 Subject: [superformat] Use /dev/floppy/%d instead of /dev/fd%d on devfs-systems
 Author: Jochen Voss <voss@debian.org>
 Bug-Debian: http://bugs.debian.org/110225
+Last-Update: 2010-05-12
 --- a/src/superformat.c
 +++ b/src/superformat.c
 @@ -486,6 +486,21 @@

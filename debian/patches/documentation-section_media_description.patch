@@ -6,6 +6,7 @@ Description: Create a Media description section in manpages
  reference the Texinfo (or HTML, or DVI) documentation.
 Author: Matteo Cypriani <mcy@lm7.fr>
 Bug-Debian: http://bugs.debian.org/282014
+Last-Update: 2010-05-12
 --- a/doc/setfdprm.1
 +++ b/doc/setfdprm.1
 @@ -118,6 +118,16 @@

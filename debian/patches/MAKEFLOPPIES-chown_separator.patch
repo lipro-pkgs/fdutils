@@ -1,6 +1,7 @@
 Subject: [MAKEFLOPPIES] Fix the chown calls to use ':' instead of '.'
 Author: Jochen Voss <voss@debian.org>
 Bug-Debian: http://bugs.debian.org/205367
+Last-Update: 2010-05-12
 --- a/src/MAKEFLOPPIES
 +++ b/src/MAKEFLOPPIES
 @@ -216,7 +216,7 @@

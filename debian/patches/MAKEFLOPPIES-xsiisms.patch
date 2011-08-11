@@ -1,6 +1,7 @@
 Subject: [MAKEFLOPPIES] Remove XSIisms and replace use of /bin/bash with /bin/sh
 Author: David Weinehall <tao@acc.umu.se>
 Bug-Debian: http://bugs.debian.org/254933
+Last-Update: 2010-05-12
 --- a/src/MAKEFLOPPIES
 +++ b/src/MAKEFLOPPIES
 @@ -47,7 +47,7 @@

@@ -2,6 +2,7 @@ Description: manpage-has-errors-from-man "macro not defined"
  Delete all occurrences of ".lp" and ".iX" in manpages to get rid of
  this lintian warnings.
 Author: Matteo Cypriani <mcy@lm7.fr>
+Last-Update: 2010-05-12
 --- a/doc/diskd.1
 +++ b/doc/diskd.1
 @@ -33,7 +33,6 @@

@@ -7,6 +7,7 @@ Description: Change occurrences of /etc/fdprm for /etc/mediaprm
  and does not seem to be related to any bug).
 Author: Matteo Cypriani <mcy@lm7.fr>
 Bug-Debian: http://bugs.debian.org/519224
+Last-Update: 2010-05-12
 --- a/src/mediaprm
 +++ b/src/mediaprm
 @@ -1,4 +1,5 @@

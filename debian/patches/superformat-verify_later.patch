@@ -4,6 +4,7 @@ Description: [superformat] Make --verify_later an option without argument
  suppresses the required argument.
 Author: Matteo Cypriani <mcy@lm7.fr>
 Bug-Debian: http://bugs.debian.org/331488
+Last-Update: 2010-05-12
 --- a/src/superformat.c
 +++ b/src/superformat.c
 @@ -560,7 +560,7 @@

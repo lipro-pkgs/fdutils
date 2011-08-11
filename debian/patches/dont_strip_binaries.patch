@@ -3,7 +3,7 @@ Description: Don't strip binaries
  wether nostrip is set in DH_BUILD_OPTIONS or not.
 Author: Thomas Preud'homme <robotux@celest.fr>
 Origin: vendor
-Last-Updated: 2011-08-05
+Last-Update: 2011-08-05
 Forwarded: not-needed
 --- a/src/Makefile.in
 +++ b/src/Makefile.in

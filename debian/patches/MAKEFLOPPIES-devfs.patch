@@ -1,6 +1,7 @@
 Subject: [MAKEFLOPPIES] Exit if devfs is detected
 Author: Taral <taral@taral.net>
 Bug-Debian: http://bugs.debian.org/96845
+Last-Update: 2010-05-12
 --- a/src/MAKEFLOPPIES
 +++ b/src/MAKEFLOPPIES
 @@ -10,6 +10,13 @@

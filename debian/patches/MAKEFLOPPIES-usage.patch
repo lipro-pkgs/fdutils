@@ -1,6 +1,7 @@
 Subject: [MAKEFLOPPIES] Fix usage printing to fit the manpage
 Author: Matteo Cypriani <mcy@lm7.fr>
 Bug-Debian: http://bugs.debian.org/275877
+Last-Update: 2010-05-12
 --- a/src/MAKEFLOPPIES
 +++ b/src/MAKEFLOPPIES
 @@ -169,10 +169,8 @@

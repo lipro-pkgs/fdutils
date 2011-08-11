@@ -3,6 +3,7 @@ Description: Add info dircategory & fix direntry
  the direntry declaration was wrong. This patch sets dircategory to
  "Utilities" and fixes direntry.
 Author: Matteo Cypriani <mcy@lm7.fr>
+Last-Update: 2010-05-12
 --- a/doc/fdutils.texi
 +++ b/doc/fdutils.texi
 @@ -21,9 +21,10 @@

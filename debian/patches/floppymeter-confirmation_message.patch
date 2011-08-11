@@ -2,6 +2,7 @@ Subject: [floppymeter] Improve initial confirmation message
 Author: Jari Aalto <jari.aalto@cante.net>
 Bug-Debian: http://bugs.debian.org/306097
 Bug-Debian: http://bugs.debian.org/298046
+Last-Update: 2010-05-12
 --- a/src/floppymeter.c
 +++ b/src/floppymeter.c
 @@ -154,8 +154,9 @@

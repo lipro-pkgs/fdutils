@@ -1,4 +1,5 @@
 Subject: Fix many typos in the documentation
+Last-Update: 2010-05-12
 --- a/doc/README
 +++ b/doc/README
 @@ -303,7 +303,7 @@

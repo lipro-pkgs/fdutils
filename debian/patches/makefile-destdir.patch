@@ -1,6 +1,7 @@
 Description: Add DESTDIR support in makefiles
  Tune src/Makefile.in and doc/Makefile.in to use DESTDIR variable.
 Author: Matteo Cypriani <mcy@lm7.fr>
+Last-Update: 2010-05-11
 --- a/src/Makefile.in
 +++ b/src/Makefile.in
 @@ -10,13 +10,14 @@
