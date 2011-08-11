@@ -3,7 +3,7 @@ Section: utils
 Priority: optional
 Maintainer: Matteo Cypriani <mcy@lm7.fr>
 Standards-Version: 3.9.2.0
-Build-Depends: debhelper (>= 7.0.50~), autoconf, automake, dh-autoreconf, texi2html, flex, texlive, texinfo, po-debconf
+Build-Depends: debhelper (>= 8.0.0~), autoconf, automake, dh-autoreconf, texi2html, flex, texlive, texinfo, po-debconf
 Homepage: http://fdutils.linux.lu/
 Vcs-Git: git://git.debian.org/git/collab-maint/fdutils.git
 Vcs-Browser: http://git.debian.org/?p=collab-maint/fdutils.git
