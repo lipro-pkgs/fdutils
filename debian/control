@@ -9,7 +9,7 @@ Vcs-Git: git://git.debian.org/git/collab-maint/fdutils.git
 Vcs-Browser: http://git.debian.org/?p=collab-maint/fdutils.git
 
 Package: fdutils
-Architecture: linux-any
+Architecture: alpha amd64 hppa ia64 i386 m68k powerpc powerpcspe ppc64 sparc sparc64
 Depends: ${shlibs:Depends}, ${misc:Depends}, dpkg (>= 1.15.4) | install-info, debianutils (>= 1.7)
 Recommends: mtools (>= 3.8-1)
 Replaces: miscutils, manpages (<< 1.11-3)
