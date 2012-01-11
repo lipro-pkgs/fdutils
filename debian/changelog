@@ -1,8 +1,9 @@
-fdutils (5.5-20060227-6) UNRELEASED; urgency=low
+fdutils (5.5-20060227-6) unstable; urgency=low
 
   [ Matteo Cypriani ]
-  * Use linux-any instead of a full list of architectures
-    (Closes: #627220).
+  * Switch to debhelper 8.0.0~
+  * Rebuild architectures' list (exclude arm*, mips* and some others).
+  * Add Last-Update field to all patches.
   * Fix spelling-error-in-manpage "allows one to".
   * Add help_messages.patch, that contains several fixes related to the usage
     and help messages:
@@ -21,7 +22,7 @@ fdutils (5.5-20060227-6) UNRELEASED; urgency=low
   * Add dont_strip_binaries.patch: don't strip files with nostrip set in
     DEB_BUILD_OPTION (Closes: #436826).
 
- -- Matteo Cypriani <mcy@lm7.fr>  Thu, 11 Aug 2011 00:14:32 +0200
+ -- Matteo Cypriani <mcy@lm7.fr>  Wed, 11 Jan 2012 14:37:17 +0100
 
 fdutils (5.5-20060227-5) unstable; urgency=low
 
