@@ -1,3 +1,11 @@
+fdutils (5.5-20060227-7) UNRELEASED; urgency=low
+
+  * Switch to debhelper 9
+  * Bump Standards-Version to 3.9.3
+  * debian/copyright: update Format
+
+ -- Matteo Cypriani <mcy@lm7.fr>  Sun, 20 May 2012 18:16:09 +0200
+
 fdutils (5.5-20060227-6) unstable; urgency=low
 
   [ Matteo Cypriani ]
