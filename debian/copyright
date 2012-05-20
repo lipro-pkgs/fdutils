@@ -1,7 +1,8 @@
-Format: http://svn.debian.org/wsvn/dep/web/deps/dep5.mdwn?op=file&rev=166
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: Linux floppy utilities
 Upstream-Contact: Alain Knaff <alain@knaff.lu>
 Source: http://www.tux.org/pub/knaff/fdutils/fdutils-5.5.tar.gz
+License: GPL-2+
 
 Files: *
 Copyright: 1993-2006 Alain Knaff <alain@linux.lu>
@@ -21,7 +22,7 @@ Copyright:
  2005, 2006 Anibal Monsalve Salazar <anibal@debian.org>
  2007, 2008 Christian Perrier <bubulle@debian.org>
  2008, 2010 Anibal Monsalve Salazar <anibal@debian.org>
- 2010-2011 Matteo Cypriani <mcy@lm7.fr>
+ 2010-2012 Matteo Cypriani <mcy@lm7.fr>
 License: GPL-2+
 
 License: GPL-2+
