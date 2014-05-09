@@ -1,10 +1,20 @@
-fdutils (5.5-20060227-7) UNRELEASED; urgency=low
+fdutils (5.5-20060227-7) unstable; urgency=low
 
   * Switch to debhelper 9
-  * Bump Standards-Version to 3.9.3
-  * debian/copyright: update Format
+  * Bump Standards-Version to 3.9.5
+  * Update debian/copyright (Format, License and dates)
+  * debian/control: use canonic VCS URIs
+  * Patches:
+    + help_messages.patch: add related bug number
+    + Add remove_texi2html_dependency.patch to use makeinfo instead of
+      the obsolete texi2html to generate HTML pages (fixes lintian error
+      build-depends-on-obsolete-package)
+    + Add floppymeter-makefile_typo.patch (fixes lintian warning
+      hardening-no-relro)
+    + Add documentation-faq_cleanup.patch (fixes lintian error
+      privacy-breach-w3c-valid-html and warning privacy-breach-generic)
 
- -- Matteo Cypriani <mcy@lm7.fr>  Sun, 20 May 2012 18:16:09 +0200
+ -- Matteo Cypriani <mcy@lm7.fr>  Fri, 09 May 2014 00:24:48 -0400
 
 fdutils (5.5-20060227-6) unstable; urgency=low
 
