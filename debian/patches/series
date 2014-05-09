@@ -19,3 +19,4 @@ fdmount-compilation_linux_2.6.patch
 dont_strip_binaries.patch
 help_messages.patch
 remove_texi2html_dependency.patch
+floppymeter-makefile_typo.patch
