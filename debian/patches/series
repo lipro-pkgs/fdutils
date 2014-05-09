@@ -20,3 +20,4 @@ dont_strip_binaries.patch
 help_messages.patch
 remove_texi2html_dependency.patch
 floppymeter-makefile_typo.patch
+documentation-faq_cleanup.patch
