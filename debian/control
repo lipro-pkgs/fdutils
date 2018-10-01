@@ -5,8 +5,8 @@ Maintainer: Matteo Cypriani <mcy@lm7.fr>
 Standards-Version: 3.9.5
 Build-Depends: debhelper (>= 9.0.0~), autoconf, automake, dh-autoreconf, flex, texlive, texinfo, po-debconf
 Homepage: http://fdutils.linux.lu/
-Vcs-Git: git://anonscm.debian.org/collab-maint/fdutils.git
-Vcs-Browser: http://anonscm.debian.org/gitweb/?p=collab-maint/fdutils.git
+Vcs-Git: https://salsa.debian.org/debian/fdutils.git
+Vcs-Browser: https://salsa.debian.org/debian/fdutils
 
 Package: fdutils
 Architecture: alpha amd64 hppa ia64 i386 m68k powerpc powerpcspe ppc64 sparc sparc64
