@@ -1,3 +1,9 @@
+fdutils (5.5-20060227-8) UNRELEASED; urgency=medium
+
+  * d/copyright: Use https protocol in Format field
+
+ -- Ondřej Nový <onovy@debian.org>  Mon, 01 Oct 2018 10:20:48 +0200
+
 fdutils (5.5-20060227-7) unstable; urgency=low
 
   * Switch to debhelper 9

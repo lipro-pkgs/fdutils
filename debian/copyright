@@ -1,4 +1,4 @@
-Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: Linux floppy utilities
 Upstream-Contact: Alain Knaff <alain@knaff.lu>
 Source: http://www.tux.org/pub/knaff/fdutils/fdutils-5.5.tar.gz
