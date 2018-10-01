@@ -1,6 +1,7 @@
 fdutils (5.5-20060227-8) UNRELEASED; urgency=medium
 
   * d/copyright: Use https protocol in Format field
+  * d/changelog: Remove trailing whitespaces
 
  -- Ondřej Nový <onovy@debian.org>  Mon, 01 Oct 2018 10:20:48 +0200
 
@@ -330,7 +331,7 @@ fdutils (5.4-1) unstable; urgency=low
 fdutils (5.3-7) unstable; urgency=low
 
   * The fixing-some-typos-release:
-  
+
   * Fix the doc-base control file (Closes: #137537)
   * Fix the fdutilsconfig help message (Closes: #134749)
   * Fix the error message for formating write protected disks
@@ -344,7 +345,7 @@ fdutils (5.3-6) unstable; urgency=high
 
   * Urgency is high, because some noninteractive installs did
     not work properly with previous versions.
-  
+
   * Ignore case of $DEBIAN_FRONTEND (Closes: #134380)
   * Backport fixes for MAKEFLOPPIES from the new upstream version
     (Closes: #129492)
@@ -359,13 +360,13 @@ fdutils (5.3-5) unstable; urgency=low
     revision 5.3-3.6 suffers from the problems described in bugs
     #130805 and #130473.  I left the urgency at "low", to give my
     changes for 5.3-4 enough time for testing.
-  
+
   * Do not attempt to create floppy device nodes in the postinst.
     They should be created by debootstrap.  You could use MAKEDEV at
     any time to recreate them, if they get lost. (closes: #130748)
   * Remove makedev from the Depends line
   * Update README.Debian
-  
+
   * Change the section to "base" (match the override file).
 
  -- Jochen Voss <voss@debian.org>  Sun, 27 Jan 2002 00:08:41 +0100
@@ -373,7 +374,7 @@ fdutils (5.3-5) unstable; urgency=low
 fdutils (5.3-4) unstable; urgency=low
 
   * New maintainer (with permission from Vaidhy Mayilrangam)
-  
+
   * Use /sbin/MAKEDEV instead of MAKEFLOPPIES, because MAKEFLOPPIES is
     broken.  Change the version requirement for the makedev
     dependency to 2.3.1-24.  (Closes: #55668, #130473)
@@ -408,7 +409,7 @@ fdutils (5.3-3.6) unstable; urgency=high
 fdutils (5.3-3.5) unstable; urgency=low
 
   * Non-maintainer upload.
-  * Don't create device nodes on devfs systems. 
+  * Don't create device nodes on devfs systems.
   * (Closes: #96845, #106576, #111089, #121713)
 
  -- Steve Kowalik <stevenk@debian.org>  Sat,  5 Jan 2002 00:00:48 +1100
@@ -443,7 +444,7 @@ fdutils (5.3-3.1) unstable; urgency=high
   * Add build dependencies, closes: #82000
   * Build-depend on and use kernel-headers-2.2.19, closes: #90789, #81999
   * Downgrade mtools recommendation to a suggestion, closes: #51368, #95835
-  * Remove /usr/doc/fdutils link in prerm, thanks to Adrian Bunk, 
+  * Remove /usr/doc/fdutils link in prerm, thanks to Adrian Bunk,
     closes: #67426
   * Noninteractive postinst if DEBIAN_FRONTEND=Noninteractive, closes: #96151
   * Urgency high, since the latter is needed for boot-floppies
@@ -461,7 +462,7 @@ fdutils (5.3-2) unstable; urgency=low
 
   * New Maintainer
   * Fixed MAKEFLOPPIES, closes: Bug #51040
-  * Already fixed in pervious versions, closes: Bug #12166, 
+  * Already fixed in pervious versions, closes: Bug #12166,
     Bug #30782, #35891, #36596
   * fdformat obselete, closes: Bug #8975, #10292
 
@@ -508,7 +509,7 @@ fdutils (5.2.0.1998-07-01-2) unstable; urgency=low
 fdutils (5.2.0.1998-07-01-1) unstable; urgency=low
 
   * New upstream release:
-        Fixed a few bugs listed in the Debian buglist posted to 
+        Fixed a few bugs listed in the Debian buglist posted to
         linux.debian.bugs.dis
         1.  Lessen dependancy of superformat on mtools by not failing if
         mformat cannot be called: low-level verify will still be done, but
@@ -599,7 +600,7 @@ fdutils (4.3-6) unstable; urgency=low
  -- Mark W. Eichin <eichin@kitten.gen.ma.us>  Mon, 17 Feb 1997 20:20:21 -0500
 
 fdutils (4.3-5) unstable; urgency=low
-  
+
   * Corrected fdmount mode back to 4750 (Bug#4051)
 
  -- Mark W. Eichin <eichin@kitten.gen.ma.us>  Mon, 17 Feb 1997 20:20:21 -0500
