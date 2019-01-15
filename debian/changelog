@@ -1,10 +1,15 @@
 fdutils (5.5-20060227-8) UNRELEASED; urgency=medium
 
+  [ Andreas Henriksson ]
+  [Ondřej Nový <onovy@debian.org>]
   * d/copyright: Use https protocol in Format field
   * d/changelog: Remove trailing whitespaces
   * d/control: Set Vcs-* to salsa.debian.org
 
- -- Ondřej Nový <onovy@debian.org>  Mon, 01 Oct 2018 10:20:48 +0200
+  [Andreas Henriksson <andreas@fatal.se>]
+  * Add debian/config-ftbfs.patch (Closes: #916065)
+
+ -- Matteo Cypriani <mcy@lm7.fr>  Sat, 19 Jan 2019 11:19:00 +0100
 
 fdutils (5.5-20060227-7) unstable; urgency=low
 

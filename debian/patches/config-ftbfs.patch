@@ -1,0 +1,52 @@
+--- fdutils-5.5-20060227.orig/src/Makefile.in
++++ fdutils-5.5-20060227/src/Makefile.in
+@@ -23,7 +23,7 @@ CC       = @CC@
+ PID      = -DPIDFILE=\"@localstatedir@/run/diskseekd.pid\"
+ DEFINES  = $(DEFINES) $(PID) -DSYSCONFDIR=\"@sysconfdir@\"
+ DEFS     = @DEFS@ -DSYSCONFDIR=\"@sysconfdir@\"
+-CPPFLAGS = -I. -I@srcdir@ @CPPFLAGS@ $(DEFS)
++CPPFLAGS = -I. -I@srcdir@ -I@top_srcdir@ @CPPFLAGS@ $(DEFS)
+ CFLAGS   = -Wall @CFLAGS@
+ 
+ LDFLAGS     = @LDFLAGS@
+--- fdutils-5.5-20060227.orig/src/driveprm.c
++++ fdutils-5.5-20060227/src/driveprm.c
+@@ -1,3 +1,4 @@
++#include <config.h>
+ #include <sys/types.h>
+ #ifdef HAVE_SYS_SYSMACROS_H
+ # include <sys/sysmacros.h>
+--- fdutils-5.5-20060227.orig/src/superformat.c
++++ fdutils-5.5-20060227/src/superformat.c
+@@ -32,6 +32,7 @@ Todo:
+ 	cylinders as happen to work (as in 2m).  Currently, if too many cylinders
+ 	are attempted it won't fail until the very end
+  */
++#include <config.h>
+ #include <sys/types.h>
+ #ifdef HAVE_SYS_SYSMACROS_H
+ # include <sys/sysmacros.h>
+--- fdutils-5.5-20060227.orig/src/xdfcopy.c
++++ fdutils-5.5-20060227/src/xdfcopy.c
+@@ -2,6 +2,7 @@
+  * Software patents declared unconstitutional, worldwide
+  */
+ 
++#include <config.h>
+ #include <sys/types.h>
+ #ifdef HAVE_SYS_SYSMACROS_H
+ # include <sys/sysmacros.h>
+--- fdutils-5.5-20060227.orig/src/diskseekd.c
++++ fdutils-5.5-20060227/src/diskseekd.c
+@@ -1,3 +1,4 @@
++#include <config.h>
+ #include <sys/types.h>
+ #ifdef HAVE_SYS_SYSMACROS_H
+ # include <sys/sysmacros.h>
+--- fdutils-5.5-20060227.orig/src/floppymeter.c
++++ fdutils-5.5-20060227/src/floppymeter.c
+@@ -1,3 +1,4 @@
++#include <config.h>
+ #include <sys/types.h>
+ #ifdef HAVE_SYS_SYSMACROS_H
+ # include <sys/sysmacros.h>
