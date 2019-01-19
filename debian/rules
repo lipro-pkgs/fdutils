@@ -6,7 +6,7 @@
 #export DH_OPTIONS=-v
 
 %:
-	dh $@ --with autoreconf
+	dh $@ --no-parallel
 
 override_dh_auto_clean:
 	dh_auto_clean
