@@ -1,3 +1,4 @@
-version=3
-opts=dversionmangle=s/-(\d*)// \
-ftp://sunsite.unc.edu/pub/Linux/utils/disk-management/fdutils-(.*).tar.gz debian  uupdate
+version=4
+opts="dversionmangle=s/-(\d*)//" \
+  https://fdutils.linux.lu/download.html \
+  @PACKAGE@@ANY_VERSION@@ARCHIVE_EXT@ debian uupdate
