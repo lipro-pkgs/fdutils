@@ -1,6 +1,6 @@
 Description: Don't strip binaries
  Don't strip binaries as this is handled by dh_strip according to
- wether nostrip is set in DH_BUILD_OPTIONS or not.
+ whether nostrip is set in DH_BUILD_OPTIONS or not.
 Author: Thomas Preud'homme <robotux@celest.fr>
 Origin: vendor
 Last-Update: 2011-08-05
