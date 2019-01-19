@@ -1,3 +1,8 @@
+Subject: Fix FTBFS with glibc 2.28
+Author: Andreas Henriksson <andreas@fatal.se>
+Origin: vendor
+Bug-Debian: https://bugs.debian.org/916065
+Last-Update: 2019-01-19
 --- fdutils-5.5-20060227.orig/src/Makefile.in
 +++ fdutils-5.5-20060227/src/Makefile.in
 @@ -23,7 +23,7 @@ CC       = @CC@
