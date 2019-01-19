@@ -4,7 +4,7 @@ Priority: optional
 Maintainer: Matteo Cypriani <mcy@lm7.fr>
 Standards-Version: 3.9.5
 Build-Depends: debhelper (>= 9.0.0~), autoconf, automake, dh-autoreconf, flex, texlive, texinfo, po-debconf
-Homepage: http://fdutils.linux.lu/
+Homepage: https://fdutils.linux.lu/
 Vcs-Git: https://salsa.debian.org/debian/fdutils.git
 Vcs-Browser: https://salsa.debian.org/debian/fdutils
 
