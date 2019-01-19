@@ -2,7 +2,7 @@ Subject: Quick spell-check against all the documentation
 Author: Matteo Cypriani <mcy@lm7.fr>
 Bug-Debian: http://bugs.debian.org/395428
 Bug-Debian: http://bugs.debian.org/525257
-Last-Update: 2011-08-10
+Last-Update: 2019-01-19
 --- a/doc/fdmount.1
 +++ b/doc/fdmount.1
 @@ -15,7 +15,7 @@
@@ -99,6 +99,15 @@ Last-Update: 2011-08-10
  the info version certain examples are difficult to read due to the
  quoting conventions used in info.
  .SH Description
+@@ -262,7 +262,7 @@
+ enables/disables ISO formats. Odd values of
+ \&\fIiso\fR
+ enable these formats, whereas even values disable them. ISO formats
+-don't have index headers, and thus allow to fit slightly more data on
++don't have index headers, and thus allow one to fit slightly more data on
+ a disk.
+ .TP
+ \&\fR\&\f(CWsave\fR\ 
 @@ -280,7 +280,7 @@
  chooses rate tables for various drives. Each dspec byte describes one
  drive. Bits 0 and 1 say which drive is described. Bits 2 and 3 describe
@@ -110,6 +119,15 @@ Last-Update: 2011-08-10
  bit. It should be set to 0. Bit 5-7 should be zero as well. The
 --- a/doc/fdrawcmd.texi
 +++ b/doc/fdrawcmd.texi
+@@ -191,7 +191,7 @@
+ enables/disables ISO formats. Odd values of
+ @var{iso}
+ enable these formats, whereas even values disable them. ISO formats
+-don't have index headers, and thus allow to fit slightly more data on
++don't have index headers, and thus allow one to fit slightly more data on
+ a disk.
+ 
+ @item save
 @@ -209,7 +209,7 @@
  chooses rate tables for various drives. Each dspec byte describes one
  drive. Bits 0 and 1 say which drive is described. Bits 2 and 3 describe
@@ -547,9 +565,10 @@ Last-Update: 2011-08-10
 +huge amount of @code{Over/Underrun - retrying} messages, then the FIFO
  threshold is too low. Try with a higher value, until you only get an
 -occasional Over/Underrun.  It is a good idea to compile the floppy
-+occasional over/underrun.  It is a good idea to compile the floppy
- driver as a module when doing this tuning. Indeed, it allows to try
+-driver as a module when doing this tuning. Indeed, it allows to try
 -different fifo values without rebooting the machine for each test. Note
++occasional over/underrun.  It is a good idea to compile the floppy
++driver as a module when doing this tuning. Indeed, it allows one to try
 +different FIFO values without rebooting the machine for each test. Note
  that you need to do @code{floppycontrol --messages} every time you
  re-insert the module.
@@ -862,7 +881,7 @@ Last-Update: 2011-08-10
  supported both by setfdprm and superformat.  The new format description
 -is easyer to handle, because it allows to set the different parameters
 -of a format description in a symbolic and position independant way,
-+is easier to handle, because it allows to set the different parameters
++is easier to handle, because it allows one to set the different parameters
 +of a format description in a symbolic and position independent way,
  using a series of @emph{variable=value} clauses.  Moreover, it
  automatically fills in sensible default values for unspecified
@@ -872,7 +891,7 @@ Last-Update: 2011-08-10
  @subsection Legacy formats
  
 -The @code{swapsides} format allows to descibe disks whose sides are
-+The @code{swapsides} format allows to describe disks whose sides are
++The @code{swapsides} format allows one to describe disks whose sides are
  swapped, such as CBM1581 disks.
  
  @node Expert options,, Legacy formats, Syntax
@@ -950,15 +969,17 @@ Last-Update: 2011-08-10
  meaningful for 3 1/2, we hope that there will be no ambiguity.
  
  
-@@ -446,7 +446,7 @@
+@@ -446,8 +446,8 @@
  sized sectors and too small gaps.  XDF's sector arrangement allows it to
  read sectors alternatively from both sides, i.e. the first sector from
  side 0, the second from side 1, and the third from side 0 again.  This
 -differs from the usualy formats, where first the entire side 0 is read,
+-and then the entire side 1.  This technique allows to read both sides of
 +differs from the usually formats, where first the entire side 0 is read,
- and then the entire side 1.  This technique allows to read both sides of
++and then the entire side 1.  This technique allows one to read both sides of
  a disk in roughly three rotations. 
  
+ The following example illustrates how this is done.  In our example we
 @@ -495,7 +495,7 @@
  stop at a higher position than we started, and that we also need to
  allow some time for seeking to the next track).
@@ -1140,3 +1161,14 @@ Last-Update: 2011-08-10
  @code{2m} formats were specifically designed to hold an MS-DOS
  filesystem, and that they take advantage of the fact that the MS-DOS
  filesystem uses redundant sectors on the first track (the FAT, which is
+--- a/doc/fd.4
++++ b/doc/fd.4
+@@ -235,7 +235,7 @@
+ .\"}}}
+ .\"{{{  Notes
+ .SH NOTES
+-The various formats allow to read and write many types of disks.
++The various formats allow one to read and write many types of disks.
+ However, if a floppy is formatted with a too small inter sector gap,
+ performance may drop, up to needing a few seconds to access an entire
+ track. To prevent this, use interleaved formats. It is not possible to
