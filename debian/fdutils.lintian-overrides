@@ -1,0 +1,3 @@
+# dpkg-stateoverride is called as part of a wrapper, the check is done in
+# another way (/etc/fdmount.conf)
+fdutils binary: unconditional-use-of-dpkg-statoverride postinst*

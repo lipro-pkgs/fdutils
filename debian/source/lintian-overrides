@@ -1,0 +1,2 @@
+# Upstream does not have GPG signatures for source tarballs
+fdutils source: debian-watch-does-not-check-gpg-signature
