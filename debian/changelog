@@ -1,15 +1,27 @@
-fdutils (5.5-20060227-8) UNRELEASED; urgency=medium
+fdutils (5.5-20060227-8) unstable; urgency=medium
 
-  [ Andreas Henriksson ]
-  [Ondřej Nový <onovy@debian.org>]
+  [ Ondřej Nový <onovy@debian.org> ]
   * d/copyright: Use https protocol in Format field
   * d/changelog: Remove trailing whitespaces
   * d/control: Set Vcs-* to salsa.debian.org
 
-  [Andreas Henriksson <andreas@fatal.se>]
+  [ Andreas Henriksson <andreas@fatal.se> ]
   * Add debian/config-ftbfs.patch (Closes: #916065)
 
- -- Matteo Cypriani <mcy@lm7.fr>  Sat, 19 Jan 2019 11:19:00 +0100
+  [ Matteo Cypriani ]
+  * Bumped Standards-Version to 4.3.0 (no changes needed)
+  * Bumped compat-level to debhelper 12 (with --no-parallel)
+  * d/rules: hardening is now enabled
+  * Added lintian-overrides files
+  * d/control: secure Homepage URI
+  * d/watch: fixed broken mirror, updated to version 4
+  * d/README.Debian: proof-read and reformatted
+  * Patches:
+    + dont_strip_binaries.patch: fixed a typo in the header
+    + documentation-spelling_errors.patch: a few more errors fixed
+  * d/config: dropped support for fdutils 5.2
+
+ -- Matteo Cypriani <mcy@lm7.fr>  Sat, 19 Jan 2019 15:45:30 +0100
 
 fdutils (5.5-20060227-7) unstable; urgency=low
 
