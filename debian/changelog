@@ -3,6 +3,7 @@ fdutils (5.5-20060227-8cpm4l1) UNRELEASED; urgency=low
   * UNRELEASED
   * debian/control: Updated maintainer fields for CPM4L's github place.
   * debian/control: Updated vcs fields for CPM4L's github place.
+  * debian/{control,rules}: Downgrade to support oldstable systems.
 
  --
 

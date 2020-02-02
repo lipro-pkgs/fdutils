@@ -2,17 +2,15 @@ Source: fdutils
 Section: utils
 Priority: optional
 Maintainer: Stephan Linz <linz@li-pro.net>
-Standards-Version: 4.3.0
-Build-Depends: debhelper (>= 12), autoconf, automake,
-  flex, texlive, texinfo, po-debconf
+Standards-Version: 3.9.5
+Build-Depends: debhelper (>= 9.0.0~), autoconf, automake, dh-autoreconf, flex, texlive, texinfo, po-debconf
 Homepage: https://fdutils.linux.lu/
 Vcs-Git: https://github.com/lipro-pkgs/fdutils.git
 Vcs-Browser: https://github.com/lipro-pkgs/fdutils
 
 Package: fdutils
 Architecture: alpha amd64 hppa ia64 i386 m68k powerpc powerpcspe ppc64 sparc sparc64
-Depends: ${shlibs:Depends}, ${misc:Depends},
-  dpkg (>= 1.15.4) | install-info, debianutils (>= 1.7)
+Depends: ${shlibs:Depends}, ${misc:Depends}, dpkg (>= 1.15.4) | install-info, debianutils (>= 1.7)
 Recommends: mtools (>= 3.8-1)
 Replaces: miscutils, manpages (<< 1.11-3)
 Description: Linux floppy utilities
