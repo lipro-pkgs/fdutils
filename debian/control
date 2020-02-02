@@ -21,7 +21,7 @@ Description: Linux floppy utilities
  .
   - superformat: formats high capacity disks (up to 1992k
     for high density disks or up to 3984k for extra density
-     disks);
+    disks);
   - fdmount: automatically mounts/unmounts disks when they are
     inserted/removed;
   - xdfcopy: formats, reads and writes OS/2's XDF disks;
@@ -31,6 +31,9 @@ Description: Linux floppy utilities
   - setfdprm: sets the current disk geometry;
   - fdrawcmd: sends raw commands to the floppy driver;
   - floppycontrol: configures the floppy driver;
+  - floppymeter: measure capacity and speed of floppy drive;
+  - diskd: daemon to executes a command on disk insertion;
+  - diskseekd: simulates Messy Dos' drive cleaning effect;
   - general documentation about the floppy driver.
  .
  Note that these utilities do not work for USB floppy drives, because
