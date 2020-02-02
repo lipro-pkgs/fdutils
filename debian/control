@@ -1,7 +1,7 @@
 Source: fdutils
 Section: utils
 Priority: optional
-Maintainer: Matteo Cypriani <mcy@lm7.fr>
+Maintainer: Stephan Linz <linz@li-pro.net>
 Standards-Version: 4.3.0
 Build-Depends: debhelper (>= 12), autoconf, automake,
   flex, texlive, texinfo, po-debconf
