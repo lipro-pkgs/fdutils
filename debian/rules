@@ -8,14 +8,14 @@
 export DEB_BUILD_MAINT_OPTIONS = hardening=+all
 
 %:
-	dh $@ --no-parallel
+	dh $@ --with autoreconf
 
 override_dh_auto_clean:
 	dh_auto_clean
 	[ ! -f src/Makefile ] || $(MAKE) -C src spotless
 
 override_dh_auto_build:
-	dh_auto_build -- all html
+	dh_auto_build -- all
 
 override_dh_auto_install:
 	dh_auto_install

@@ -1,18 +1,16 @@
 Source: fdutils
 Section: utils
 Priority: optional
-Maintainer: Matteo Cypriani <mcy@lm7.fr>
-Standards-Version: 4.3.0
-Build-Depends: debhelper (>= 12), autoconf, automake,
-  flex, texlive, texinfo, po-debconf
+Maintainer: Stephan Linz <linz@li-pro.net>
+Standards-Version: 3.9.5
+Build-Depends: debhelper (>= 9.0.0~), autoconf, automake, dh-autoreconf, flex, texlive, texinfo, po-debconf, e2fslibs-dev
 Homepage: https://fdutils.linux.lu/
-Vcs-Git: https://salsa.debian.org/debian/fdutils.git
-Vcs-Browser: https://salsa.debian.org/debian/fdutils
+Vcs-Git: https://github.com/lipro-pkgs/fdutils.git
+Vcs-Browser: https://github.com/lipro-pkgs/fdutils
 
 Package: fdutils
 Architecture: alpha amd64 hppa ia64 i386 m68k powerpc powerpcspe ppc64 sparc sparc64
-Depends: ${shlibs:Depends}, ${misc:Depends},
-  dpkg (>= 1.15.4) | install-info, debianutils (>= 1.7)
+Depends: ${shlibs:Depends}, ${misc:Depends}, dpkg (>= 1.15.4) | install-info, debianutils (>= 1.7)
 Recommends: mtools (>= 3.8-1)
 Replaces: miscutils, manpages (<< 1.11-3)
 Description: Linux floppy utilities
@@ -23,7 +21,7 @@ Description: Linux floppy utilities
  .
   - superformat: formats high capacity disks (up to 1992k
     for high density disks or up to 3984k for extra density
-     disks);
+    disks);
   - fdmount: automatically mounts/unmounts disks when they are
     inserted/removed;
   - xdfcopy: formats, reads and writes OS/2's XDF disks;
@@ -33,6 +31,9 @@ Description: Linux floppy utilities
   - setfdprm: sets the current disk geometry;
   - fdrawcmd: sends raw commands to the floppy driver;
   - floppycontrol: configures the floppy driver;
+  - floppymeter: measure capacity and speed of floppy drive;
+  - diskd: daemon to executes a command on disk insertion;
+  - diskseekd: simulates Messy Dos' drive cleaning effect;
   - general documentation about the floppy driver.
  .
  Note that these utilities do not work for USB floppy drives, because

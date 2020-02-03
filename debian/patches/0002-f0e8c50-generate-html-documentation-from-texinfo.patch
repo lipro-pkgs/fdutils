@@ -1,0 +1,20 @@
+From f0e8c50d3c15b6653b7195dde3b122a01446c4ea Mon Sep 17 00:00:00 2001
+From: Stephan Linz <linz@li-pro.net>
+Date: Wed, 9 Dec 2009 18:16:02 +0100
+Subject: Generate HTML documentation from texinfo
+
+Signed-off-by: Stephan Linz <linz@li-pro.net>
+
+diff --git a/doc/Makefile.in b/doc/Makefile.in
+index abd8e29..733373c 100644
+--- a/doc/Makefile.in
++++ b/doc/Makefile.in
+@@ -37,7 +37,7 @@ CC          = @CC@
+ CPPFLAGS    = @CPPFLAGS@
+ CFLAGS      = @CFLAGS@
+ 
+-all: info dvi
++all: info dvi html
+ 
+ TEXISRC = \
+ acronyms.texi       fdrawcmd.texi       ioctl.texi          superformat.texi \

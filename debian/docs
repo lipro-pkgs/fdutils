@@ -2,4 +2,5 @@ CREDITS
 doc/README
 doc/*.html
 doc/*.dvi
+doc/*.pdf
 doc/floppy_formats

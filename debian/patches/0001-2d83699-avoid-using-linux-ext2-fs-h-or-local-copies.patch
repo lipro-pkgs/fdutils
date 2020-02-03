@@ -1,0 +1,45 @@
+From 2d83699090dce1346ff433ca879ff6a087dcf51e Mon Sep 17 00:00:00 2001
+From: Stephan Linz <linz@li-pro.net>
+Date: Thu, 10 Mar 2005 21:54:47 +0100
+Subject: Avoid using <linux/ext2_fs.h> or local copies
+
+With recent Linux kernel headers, such as since 2.9 and 3.3, the
+linux/ext2_fs.h header has been removed. This causes compile failures.
+
+  fatal error: linux/ext2_fs.h: No such file or directory
+   #include <linux/ext2_fs.h>
+
+On Debian bug tracker you can read (http://bugs.debian.org/235547#10):
+
+  | On Mon, Mar 01, 2004 at 02:22:44AM +0100, Bernd Schubert wrote:
+  | > The linux/ext2_fs.h header is needed for example for building unfs3
+  | > (unfs3.sf.net) with inode generation number support.
+  |
+  | Don't do that.
+  |
+  | The exact header you need is in <ext2fs/ext2_fs.h>, from e2fslibs-dev.
+  |
+  | --
+  | Daniel Jacobowitz
+  | MontaVista Software                         Debian GNU/Linux Developer
+
+So to compile, you will need to intall ...
+
+  ... on Debian/Ubuntu: apt-get install e2fslibs-dev
+  ... on Fedora/CentOS: yum install e2fsprogs-devel
+
+Signed-off-by: Stephan Linz <linz@li-pro.net>
+
+diff --git a/src/fdmount.c b/src/fdmount.c
+index 71e9686..24ea7a5 100644
+--- a/src/fdmount.c
++++ b/src/fdmount.c
+@@ -22,7 +22,7 @@
+ #include <linux/ext_fs.h>
+ #endif
+ 
+-#include <linux/ext2_fs.h>
++#include <ext2fs/ext2_fs.h>
+ 
+ #ifdef HAVE_LINUX_XIA_FS_H
+ #include <linux/xia_fs.h>

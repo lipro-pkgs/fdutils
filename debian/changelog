@@ -1,3 +1,17 @@
+fdutils (5.5-20060227-8cpm4l1) unstable; urgency=low
+
+  * debian/control: Updated maintainer fields for CPM4L's github place.
+  * debian/control: Updated vcs fields for CPM4L's github place.
+  * debian/{control,rules}: Downgrade to support oldstable systems.
+  * debian/control: Add more items to the package content description.
+  * debian/{control,patches}: Avoid using <linux/ext2_fs.h> or local copies.
+  * debian/{rules,patches}: Generate HTML documentation from texinfo.
+  * debian/{rules,patches,docs}: Generate PDF documentation from texinfo.
+  * debian/patches: Add Robotron SCP and CP/A disk parameters.
+  * debian/copyright: Update section "Files: debian/*".
+
+ -- Stephan Linz <linz@li-pro.net>  Sun, 02 Feb 2020 23:16:42 +0100
+
 fdutils (5.5-20060227-8) unstable; urgency=medium
 
   [ Ondřej Nový <onovy@debian.org> ]
