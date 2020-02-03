@@ -24,3 +24,4 @@ documentation-faq_cleanup.patch
 config-ftbfs.patch
 0001-2d83699-avoid-using-linux-ext2-fs-h-or-local-copies.patch
 0002-f0e8c50-generate-html-documentation-from-texinfo.patch
+0003-ccdd3a2-generate-pdf-documentation-from-texinfo.patch

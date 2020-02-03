@@ -1,0 +1,72 @@
+From ccdd3a202db638dc08d865d5a3a5b289cacc07a1 Mon Sep 17 00:00:00 2001
+From: Stephan Linz <linz@li-pro.net>
+Date: Sun, 25 May 2014 13:51:58 +0200
+Subject: Generate PDF documentation from texinfo
+
+Signed-off-by: Stephan Linz <linz@li-pro.net>
+
+diff --git a/Makefile.in b/Makefile.in
+index 81d0665..ebd3e0a 100644
+--- a/Makefile.in
++++ b/Makefile.in
+@@ -31,6 +31,9 @@ html:
+ dvi:
+ 	$(MAKE) -C doc dvi
+ 
++pdf:
++	$(MAKE) -C doc pdf
++
+ 
+ install-info:
+ 	$(MAKE) -C doc install-info
+diff --git a/doc/Makefile.in b/doc/Makefile.in
+index 733373c..b56ff82 100644
+--- a/doc/Makefile.in
++++ b/doc/Makefile.in
+@@ -1,5 +1,6 @@
+ MAKEINFO    = makeinfo
+ TEXI2DVI    = texi2dvi
++TEXI2PDF    = texi2pdf
+ TEXI2HTML   = makeinfo --html --no-split --force -o $@
+ 
+ top_srcdir  = @top_srcdir@
+@@ -37,7 +38,7 @@ CC          = @CC@
+ CPPFLAGS    = @CPPFLAGS@
+ CFLAGS      = @CFLAGS@
+ 
+-all: info dvi html
++all: info dvi html pdf
+ 
+ TEXISRC = \
+ acronyms.texi       fdrawcmd.texi       ioctl.texi          superformat.texi \
+@@ -50,6 +51,8 @@ fdmount.texi        getfdprm.texi       setfdprm.texi
+ 
+ html: Fdutils.html
+ 
++pdf: Fdutils.pdf
++
+ dvi: Fdutils.dvi
+ 
+ info: fdutils.info
+@@ -64,16 +67,19 @@ info: fdutils.info
+ clean:
+ 	rm -f fdutils.aux fdutils.cp fdutils.cps fdutils.dvi fdutils.fn 
+ 	rm -f fdutils.log fdutils.pg fdutils.ps fdutils.toc fdutils.tp
+-	rm -f fdutils.ky fdutils.vr fdutils.info fdutils.pgs
++	rm -f fdutils.ky fdutils.vr fdutils.info fdutils.pgs fdutils.pdf
+ 	rm -f Fdutils.aux Fdutils.cp Fdutils.cps Fdutils.dvi Fdutils.fn
+ 	rm -f Fdutils.log Fdutils.pg Fdutils.pgs Fdutils.toc Fdutils.tp
+-	rm -f Fdutils.ky Fdutils.vr Fdutils.pgs
++	rm -f Fdutils.ky Fdutils.vr Fdutils.pgs Fdutils.pdf
+ 	rm -f fdutils.info*
+ 
+ 
+ %.html: Fdutils.texi
+ 	$(TEXI2HTML) $<
+ 
++%.pdf: Fdutils.texi
++	$(TEXI2PDF) $<
++
+ Fdutils.texi: $(TEXISRC) texi-linearize
+ 	./texi-linearize $(srcdir) fdutils.texi > $@
+ 
