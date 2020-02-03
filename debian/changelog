@@ -9,6 +9,7 @@ fdutils (5.5-20060227-8cpm4l1) UNRELEASED; urgency=low
   * debian/{rules,patches}: Generate HTML documentation from texinfo.
   * debian/{rules,patches,docs}: Generate PDF documentation from texinfo.
   * debian/patches: Add Robotron SCP and CP/A disk parameters.
+  * debian/copyright: Update section "Files: debian/*".
 
  --
 
