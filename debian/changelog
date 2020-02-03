@@ -5,6 +5,7 @@ fdutils (5.5-20060227-8cpm4l1) UNRELEASED; urgency=low
   * debian/control: Updated vcs fields for CPM4L's github place.
   * debian/{control,rules}: Downgrade to support oldstable systems.
   * debian/control: Add more items to the package content description.
+  * debian/{control,patches}: Avoid using <linux/ext2_fs.h> or local copies.
 
  --
 

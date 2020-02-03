@@ -3,7 +3,7 @@ Section: utils
 Priority: optional
 Maintainer: Stephan Linz <linz@li-pro.net>
 Standards-Version: 3.9.5
-Build-Depends: debhelper (>= 9.0.0~), autoconf, automake, dh-autoreconf, flex, texlive, texinfo, po-debconf
+Build-Depends: debhelper (>= 9.0.0~), autoconf, automake, dh-autoreconf, flex, texlive, texinfo, po-debconf, e2fslibs-dev
 Homepage: https://fdutils.linux.lu/
 Vcs-Git: https://github.com/lipro-pkgs/fdutils.git
 Vcs-Browser: https://github.com/lipro-pkgs/fdutils
