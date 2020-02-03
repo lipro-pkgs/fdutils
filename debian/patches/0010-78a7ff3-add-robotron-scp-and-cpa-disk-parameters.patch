@@ -1,0 +1,37 @@
+From 78a7ff32bd6162523b299ca1d06cfeb69cc58cfa Mon Sep 17 00:00:00 2001
+From: Stephan Linz <linz@li-pro.net>
+Date: Wed, 23 Mar 2005 14:59:15 +0100
+Subject: Add Robotron SCP and CP/A disk parameters
+
+Signed-off-by: Stephan Linz <linz@li-pro.net>
+
+diff --git a/src/mediaprm b/src/mediaprm
+index 5f14c8b..be569f7 100644
+--- a/src/mediaprm
++++ b/src/mediaprm
+@@ -799,3 +799,25 @@
+ 
+ "TO7-2":
+  SS DD sect=16 ssize=256 swapsides
++
++##############################################################################
++# Standard formats used by SCP and CP/A, a CP/M clone made by Robotron (GDR).
++#
++
++"SCP160":
++SS DD head=1 cyl=40 sect=16 ssize=256 dtr=1 fm=0
++
++"SCP200":
++SS DD head=1 cyl=40 sect=5 ssize=1KB dtr=1 fm=0
++
++"SCP320":
++SS DD head=1 cyl=80 sect=16 ssize=256 dtr=1 fm=0
++
++"SCP400":
++SS DD head=1 cyl=80 sect=5 ssize=1KB dtr=1 fm=0
++
++"SCP640":
++DS DD head=2 cyl=80 sect=16 ssize=256 dtr=1 fm=0
++
++"SCP800":
++DS DD head=2 cyl=80 sect=5 ssize=1KB dtr=1 fm=0
